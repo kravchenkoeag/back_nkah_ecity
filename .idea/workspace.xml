@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b2e385-8898-4e88-adcb-118cd52bd5c2" name="Changes" comment="" />
+    <list default="true" id="31b2e385-8898-4e88-adcb-118cd52bd5c2" name="Changes" comment="com">
+      <change afterPath="$PROJECT_DIR$/handlers/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +73,7 @@
       <workItem from="1726928754556" duration="3718000" />
       <workItem from="1726940346020" duration="1412000" />
       <workItem from="1726941785941" duration="131000" />
+      <workItem from="1726948430205" duration="1710000" />
     </task>
     <task id="LOCAL-00001" summary="21.09.2024 let's">
       <created>1726944149117</created>
@@ -75,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726944149117</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="com">
+      <created>1726944575695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726944575695</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +169,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="21.09.2024 let's" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.09.2024 let's" />
+    <MESSAGE value="com" />
+    <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
