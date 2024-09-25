@@ -2,21 +2,25 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/kravchenkoeag/back_nkah_ecity/db"
-	"github.com/kravchenkoeag/back_nkah_ecity/handlers"
+	"github.com/username/back_nkah_ecity/db"
+	"github.com/username/back_nkah_ecity/handlers"
 )
 
 func main() {
-	r := gin.Default()
+	// Initialize Gin router
+	router := gin.Default()
 
-	// Подключение к базе данных
+	// Connect to MongoDB
 	db.ConnectToMongoDB()
 
-	// Эндпоинты
-	r.POST("/register", handlers.RegisterUser)
-	r.POST("/login", handlers.LoginUser)
-	r.GET("/user/:id", handlers.GetUserProfile)
-	r.PUT("/user/:id", handlers.UpdateUserProfile)
+	// Define routes (endpoints)
+	router.POST("/register", handlers.RegisterUser)
+	router.POST("/login", handlers.LoginUser)
+	router.GET("/user/:id", handlers.GetUserProfile)
+	router.PUT("/user/:id", handlers.UpdateUserProfile)
+	router.GET("/groups", handlers.GetGroups)
+	router.POST("/groups", handlers.CreateGroup)
 
-	r.Run()
+	// Start the server on port 8080
+	router.Run(":8080")
 }
