@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b2e385-8898-4e88-adcb-118cd52bd5c2" name="Changes" comment="com">
-      <change afterPath="$PROJECT_DIR$/handlers/group.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/user.go" afterDir="false" />
+    <list default="true" id="31b2e385-8898-4e88-adcb-118cd52bd5c2" name="Changes" comment="add subgroup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
       <workItem from="1726940346020" duration="1412000" />
       <workItem from="1726941785941" duration="131000" />
       <workItem from="1726948430205" duration="1710000" />
-      <workItem from="1727183671346" duration="7315000" />
+      <workItem from="1727183671346" duration="8438000" />
     </task>
     <task id="LOCAL-00001" summary="21.09.2024 let's">
       <created>1726944149117</created>
@@ -95,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727183882687</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add subgroup">
+      <created>1727265209800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727265209800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +179,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="21.09.2024 let's" />
     <MESSAGE value="com" />
-    <option name="LAST_COMMIT_MESSAGE" value="com" />
+    <MESSAGE value="add subgroup" />
+    <option name="LAST_COMMIT_MESSAGE" value="add subgroup" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/username/back_nkah_ecity/db"
-	"github.com/username/back_nkah_ecity/handlers"
+	"github.com/kravchenkoeag/back_nkah_ecity/db"
+	"github.com/kravchenkoeag/back_nkah_ecity/handlers"
 )
 
 func main() {

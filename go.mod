@@ -1,4 +1,4 @@
-module back_nkah_ecity
+module github.com/kravchenkoeag/back_nkah_ecity
 
 go 1.23.1
 

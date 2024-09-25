@@ -3,8 +3,8 @@ package handlers
 import (
 	"context"
 	"github.com/gin-gonic/gin"
-	"github.com/username/back_nkah_ecity/db"
-	"github.com/username/back_nkah_ecity/models"
+	"github.com/kravchenkoeag/back_nkah_ecity/db"
+	"github.com/kravchenkoeag/back_nkah_ecity/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"

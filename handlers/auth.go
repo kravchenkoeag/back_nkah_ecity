@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"github.com/kravchenkoeag/back_nkah_ecity/db"
 	"github.com/kravchenkoeag/back_nkah_ecity/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"golang.org/x/crypto/bcrypt"
@@ -11,13 +12,15 @@ import (
 	"time"
 )
 
+// RegisterUser handles the registration of a new user
 func RegisterUser(c *gin.Context) {
 	var user models.User
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	// Hash password
+
+	// Hash the user's password
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to hash password"})
@@ -25,7 +28,8 @@ func RegisterUser(c *gin.Context) {
 	}
 	user.Password = string(hashedPassword)
 
-	_, err = userCollection.InsertOne(context.TODO(), user)
+	// Insert the new user into the MongoDB collection
+	_, err = db.MongoClient.Database("DBEcity").Collection("users").InsertOne(context.TODO(), user)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to register user"})
 		return
@@ -34,6 +38,7 @@ func RegisterUser(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "User registered successfully"})
 }
 
+// LoginUser handles the authentication of a user and returns a JWT token
 func LoginUser(c *gin.Context) {
 	var loginData struct {
 		Email    string `json:"email" binding:"required,email"`
@@ -44,8 +49,8 @@ func LoginUser(c *gin.Context) {
 		return
 	}
 
-	var user User
-	err := userCollection.FindOne(context.TODO(), bson.M{"email": loginData.Email}).Decode(&user)
+	var user models.User
+	err := db.MongoClient.Database("DBEcity").Collection("users").FindOne(context.TODO(), bson.M{"email": loginData.Email}).Decode(&user)
 	if err != nil {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid email or password"})
 		return
@@ -58,7 +63,7 @@ func LoginUser(c *gin.Context) {
 		return
 	}
 
-	// Create JWT token
+	// Create a JWT token
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"id":  user.ID,
 		"exp": time.Now().Add(time.Hour * 24).Unix(),
